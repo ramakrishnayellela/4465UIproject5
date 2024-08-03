@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create credentials</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #FAFAFA;
+        }
+        header h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        header nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        form {
+            background-color: rgb(234, 145, 12);
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        footer p {
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function myfun(){
+            const user=window.document.myform.username.value;
+            const pass=window.document.myform.pass.value;
+            const reenter=window.document.myform.pass1.value;
+            if(user.length==0 || user.length==null){
+                alert("Create user name...!");
+                return false;
+            }
+            if(pass.length==null || pass.length==0){
+                alert("Enter the password...!");
+                return false;
+            }
+            if(reenter.length==0 || reenter.length==null){
+                alert("Reenter the password...");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Udemy Learning Platform</h1>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <form name="myform" action="Register.html" class="container" onsubmit="return myfun()">
+        <h3 class="text-center">Create Credentials</h3>
+        <div class="form-group">
+            <label for="username">Create username:</label>
+            <input type="text" class="form-control" name="username" id="username" placeholder="Username">
+        </div>
+        <div class="form-group">
+            <label for="pass">Create password:</label>
+            <input type="password" class="form-control" name="pass" id="pass" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <label for="pass1">Re-enter password:</label>
+            <input type="password" class="form-control" name="pass1" id="pass1" placeholder="Re-enter Password">
+        </div>
+        <div class="text-center">
+            <input type="submit" class="btn btn-primary mt-3" value="Submit">
+        </div>
+    </form>
+    <center><footer><p>&copy; Udemy. All Rights Reserved</p></footer></center>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

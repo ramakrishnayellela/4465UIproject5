@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Verification</title>
+        <link rel="stylesheet" href="Mystyles4.css">
+        <script>
+            function myfun(){
+            const otp=window.document.myform.otp.value;
+            if(otp.length==0 || otp.length==null){
+                alert("Enter the otp...!");
+                return false;
+            }
+            return true;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Udemy Learning Platform</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html" >Home</a></li>
+                <li><a href="about.html">Aboutus</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+            <ul style="text-align:right;">
+        </ul>
+        
+        <header>
+        <center>
+        <form action="otpsuccess.html" name="myform" onsubmit="return myfun()">
+        <h3>OTP Verification</h3>
+        <p>Enter otp that has send to your registered mail-id</p>
+        Enter OTP : <input type="text" name="otp" placeholder="otp">
+        <br><br>
+        
+        <input type="submit"> <br><br>
+        </form>
+        
+        </center>
+        
+        <center><footer><p>&copy; Udemy.All Rights Reserved</p></footer></center>
+    </body>
+</html>

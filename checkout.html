@@ -1,0 +1,128 @@
+<html>
+    <head>
+        <title>home page</title>
+        <link rel="stylesheet" href="Mystyles3.css">
+        <style>
+            .payment{
+                display:flex;
+                align-items: center;
+            }
+            .payment label{
+                margin-right: 10px;
+                display:flex;
+                align-items: center;
+            }
+            form{
+              flex-direction: column;
+              gap: 20px; 
+            }
+            label {
+                display: flex;
+                align-items:center;
+            }
+        </style>
+        <script>
+            function myfun(){
+                const a=document.getElementById('123');
+                const b=a.value;
+                const c=document.getElementById('234');
+                const d=c.value;
+                if(b=="#"){
+                    alert("please select a state !");
+                    return false;
+                }
+                if(d=='#'){
+                    alert("Please select a country !");
+                    return false;
+                }
+                const radioButtons = document.getElementsByName('payment');
+                let checkedButton=false;
+                //Check if any radio button is checked
+                for(i=0;i<radioButtons.length;i++){
+                    if(radioButtons[i].checked){
+                        checkedButton=true;
+                        break;
+                    }
+                }
+                //IF no radio button is checked
+                if(!checkedButton){
+                    alert("select one payment method !");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+        
+    </head>
+    <body>
+        
+        <center><h1><img class="logo" src="udemy1.png" height="50" width="100">UDEMY Learning Platform</h1></center><br><br>
+        <nav>
+            <form  name="myform" action="payment.html" onsubmit="return myfun()">
+            <ul>
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="about.html">Aboutus</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+            <img src="bg1.webp" height="120" width="150" class="bg1">
+            <center>
+                <hr>
+            <div style="height:300px; width:600px; background-color: rgb(157, 238, 240);">
+                <h1>Check out</h1>
+                <h3>Billing Address</h3>
+                Country : <select id="234" name="country">
+                    <option value="#">select a country</option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Canada">Canada</option>
+                </select>
+                State : <select id="123" name="state">
+                    <option value="#">select state</option>
+                    <option value="Andhra Pradesh">AndhraPradesh</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Karnataka">Karnataka</option>
+                </select>
+                <br>
+                                
+                    <h3 style="margin-right:60px;">
+                    <div class="payment">
+                    Payment Method :</h3>
+                    <label><input type="radio" name="payment" value="UPI">UPI payment<br></label>
+                    <label><input type="radio" name="payment" value="Credit card">Credit card<br></label>
+                    <label><input type="radio" name="payment" value="Netbanking">Netbanking<br></label>
+                    <label><input type="radio" name="payment" value="Mobile wallet">Mobile Wallet<br></label><br><br>
+                    <input type="submit" value="submit">
+                </div>
+                </form>
+
+                </div>
+                <center>
+        
+                <section>
+                        <h3>* Here you should learn techonologies that needed to get an offer from tech companies</h3>
+                        <nav class="nav1">
+                        <ul>
+                            <h4>Programming Languagues</h4>
+                            <li><a href="https://www.learn-c.org/">C</a></li>
+                            <li><a href="https://www.python.org/" >Python</a></li>
+                            <li><a href="https://www.java.com/en/">Java</a></li>
+                            <li><a href="https://isocpp.org/">C++</a></li>
+                            <li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/">C#</a></li>
+                            <li><a href="https://www.javatpoint.com/javascript-tutorial">Javascript</a></li>
+                        </ul>
+                        </nav>
+                        <center><video width="600" height="400" controls>
+                            <source src="vid4.mp4" type="video/mp4">Video not supported
+                        </video><br><br><br>
+                        <img src="uimg.png" height="200" width="200">
+                        </center>
+                        <br><br><br>
+                        
+                    </section>
+       <center><footer><p>&copy; Udemyll Rights Reserved</p></footer></center>
+    </body>
+</html>
